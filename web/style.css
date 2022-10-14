@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(190, 189, 189);
+}
+
+.main-content{
+    text-align: center;
+    border-radius: 25px;
+}
+.main-content p{
+    color: red;
+    font-weight: 700;
+    text-align: center;
+    
+}
+
+.main-content img {
+width: 200px;
+height: 200px;
+}
+
+.main-content input{
+ color: rgb(53, 53, 53);
+ width: 200px;
+ height: 35px;
+ border-radius: 10px;
+}
+
+
+.content #vk_login  {
+    color: rgb(172, 27, 27);
+}
+
+.main-content .button button{
+    background-color: rgb(104, 104, 104);
+    font-weight: 800;
+    width: 200px;
+    height: 35px;
+    margin-top: 10px;
+
+}
