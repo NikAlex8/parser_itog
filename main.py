@@ -35,6 +35,7 @@ def get_id(login,password,user_link):
 
     def friends_info(friends_d, friend_id, driver):
         friends_set = set()
+        dict = {}
         driver.get(f"https://vk.com/id{friend_id}")
         time.sleep(1)    
         soup1 = BeautifulSoup(driver.page_source, 'html.parser')
@@ -48,10 +49,11 @@ def get_id(login,password,user_link):
         time.sleep(0.5)  
         for fs in friends_s:
                 friends_set.add(fs["id"][16:])
-             
-                
-        user = ('"id:"'+ friend_id + ' | ' + '"user_name:"' + user_name, friends_set)
-        friends_d.append(user)
+        dict[friend_id] = {
+            'user_name' : user_name,
+            'friends_ids': list(friends_set)     
+        }        
+        friends_d.append(dict)
         
 
 
